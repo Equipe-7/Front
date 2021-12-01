@@ -1,0 +1,83 @@
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo{
+    width: 10%;
+    height: 100px;
+    margin-left: 3rem;
+}
+
+.navbar-itens {
+    width: 50%;
+    padding-top: 1.2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbar-itens ul{
+    display: flex;
+    padding: 0;
+}
+
+.navbar-list li{
+    width: 100%;
+    list-style: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.car{
+    width: 20%;
+    margin-right: 2rem;
+}
+
+.car-dados{
+    display: flex;
+}
+
+.carrinho{
+    font-size: 5rem;    
+    background: rgb(255, 111, 9);
+    width: 60px;
+    height: 40px;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.qtd{
+    position: relative;
+    right: 15px;
+    bottom: -45px;
+    color: white;
+    background: rgb(0, 183, 255);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: .4rem;
+    font-weight: 400;
+}
+
+.car-texto{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nome{
+    color: coral;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.preco{
+    color: rgb(0, 195, 255);
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-left: 6.2rem;
+}
