@@ -4,7 +4,7 @@ import Search from "./../Search/Search";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(true);
+  const [logado, setLogado] = useState(false);
 
   return (
     <div className="NavBar">

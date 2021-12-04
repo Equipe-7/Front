@@ -1,0 +1,32 @@
+.footer{
+    position: absolute;
+    width: 100vw;
+    background: #7209b7;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    color: white;
+}
+
+.redes img{
+    margin-top: 1rem;
+    width: 40px;
+    padding-left: 1rem;
+}
+
+.apple{
+    width: 50px;
+}
+
+.googleplay{
+    width: 40px;
+    padding-left: 1rem;
+}
+
+.number{
+    color: white;
+    font-size: 1.5rem;
+}
