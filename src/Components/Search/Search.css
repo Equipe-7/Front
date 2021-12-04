@@ -1,26 +1,39 @@
-.search-container{
-    margin: auto;
-    width: 90%;
-    display: flex;
-    border-bottom: 1px solid rgba(102, 102, 102, 0.685);
-    padding: .5rem;
-}
-
-.lupa{
-    width: 5%;
-}
-
 .search{
-    width: 95%;
+    width: 100%;
+    display: flex;
+    border: 2px solid #7109b762;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    align-items: center;
+    padding: 0;
+    padding-top: .2rem;
+}
+
+.search-input{
+    width: 100%;
     border: none;
     outline: 0;
     transition: all 300ms;
+    color: rgb(0, 0, 0);
 }
 
-.search:focus{
-    font-size: 1rem;
+.search-input::placeholder{
+    color: grey;
 }
+
+.search-input:focus{
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.search-lupa{
+    width: 5%;
+}
+
 
 .FaSearch{
-    color: rgb(122, 122, 122);
+    color: #7209B7;
+    padding: .3rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }

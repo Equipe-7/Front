@@ -1,83 +1,145 @@
-.NavBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  -webkit-box-shadow: 0px 15px 9px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 15px 9px -10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo{
-    width: 10%;
-    height: 100px;
-    margin-left: 3rem;
+.navbar-logo {
+  width: 17%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-logo img {
+  position: relative;
+  width: 35%;
+}
+
+.navbar-menu {
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+li {
+  list-style: none;
 }
 
 .navbar-itens {
-    width: 50%;
-    padding-top: 1.2rem;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  padding: 20px 20px 0 20px;
+  color: #f72585;
+  justify-content: space-between;
+  margin-bottom: 0;
 }
 
-.navbar-itens ul{
-    display: flex;
-    padding: 0;
+.navbar-list {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms;
+  padding-bottom: 1rem;
+  
 }
 
-.navbar-list li{
-    width: 100%;
-    list-style: none;
-    padding: 1rem;
-    text-transform: uppercase;
-    font-size: .8rem;
-    font-weight: 600;
+.navbar-list:hover ul{
+  display: block;
 }
 
-.car{
-    width: 20%;
-    margin-right: 2rem;
+.navbar-itens li ul {
+  position: absolute;
+  left: 7px;
+  top: 28px;
+  border-radius: 15px;
+  border: 2px solid ;
+  box-shadow: 0px 5px 9px -3px #00000060;
+
+  display: none;
+  border-radius: 5px;
+  background-color: white;
 }
 
-.car-dados{
-    display: flex;
+.navbar-itens li ul li {
+  position: relative;
+  left: -40px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: grey;
 }
 
-.carrinho{
-    font-size: 5rem;    
-    background: rgb(255, 111, 9);
-    width: 60px;
-    height: 40px;
-    padding: .5rem;
-    border-radius: 10px;
+.navbar-itens li ul li:hover {
+  color: #7209b7;
 }
 
-.qtd{
-    position: relative;
-    right: 15px;
-    bottom: -45px;
-    color: white;
-    background: rgb(0, 183, 255);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding: .4rem;
-    font-weight: 400;
+.car {
+  width: 17%;
 }
 
-.car-texto{
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
+.car-dados {
+  display: flex;
 }
 
-.nome{
-    color: coral;
-    font-weight: 400;
-    font-size: 1.1rem;
+.carrinho {
+  font-size: 7rem;
+  width: 80px;
+  height: 40px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #7209b7;
 }
 
-.preco{
-    color: rgb(0, 195, 255);
-    width: 100%;
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin-left: 6.2rem;
+.qtd {
+  position: relative;
+  right: 20px;
+  bottom: -35px;
+  color: white;
+  background-color: #f72585;
+  border-radius: 50%;
+  width: 30px;
+  height: 22px;
+  padding: .5rem;
+  font-weight: 400;
+}
+
+.car-texto {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  color: grey;
+  text-align: end;
+  padding-right: 1rem;
+}
+
+.car-nome {
+  color: grey;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.preco {
+  color: #4cc9f0;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 6rem;
+}
+
+.logout {
+  width: 17%;
+  color: aqua;
+}
+
+.logout span {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: grey;
 }
