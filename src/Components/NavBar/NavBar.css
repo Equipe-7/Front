@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: blueviolet;
-  padding: 1rem;
+  padding-top: 1rem;
+  -webkit-box-shadow: 0px 15px 9px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 15px 9px -10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
@@ -29,9 +30,10 @@ li {
 
 .navbar-itens {
   display: flex;
-  padding: 0;
-  color: aqua;
+  padding: 20px 20px 0 20px;
+  color: #f72585;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .navbar-list {
@@ -41,30 +43,37 @@ li {
   cursor: pointer;
   position: relative;
   transition: all 300ms;
+  padding-bottom: 1rem;
+  
 }
 
-.navbar-list:hover ul li {
+.navbar-list:hover ul{
   display: block;
 }
 
 .navbar-itens li ul {
   position: absolute;
-  left: 0;
+  left: 7px;
+  top: 28px;
   border-radius: 15px;
-  background-color: blueviolet;
-  width: 150px;
+  border: 2px solid ;
+  box-shadow: 0px 5px 9px -3px #00000060;
+
+  display: none;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .navbar-itens li ul li {
   position: relative;
   left: -40px;
   padding: 0.5rem;
-  display: none;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  color: grey;
 }
 
 .navbar-itens li ul li:hover {
-  color: palevioletred;
+  color: #7209b7;
 }
 
 .car {
@@ -81,7 +90,7 @@ li {
   height: 40px;
   padding: 0.5rem;
   border-radius: 10px;
-  color: white;
+  color: #7209b7;
 }
 
 .qtd {
@@ -89,11 +98,11 @@ li {
   right: 20px;
   bottom: -35px;
   color: white;
-  background: rgb(0, 183, 255);
+  background-color: #f72585;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 0.4rem;
+  width: 30px;
+  height: 22px;
+  padding: .5rem;
   font-weight: 400;
 }
 
@@ -101,19 +110,19 @@ li {
   width: 300px;
   display: flex;
   flex-wrap: wrap;
-  color: white;
+  color: grey;
   text-align: end;
   padding-right: 1rem;
 }
 
 .car-nome {
-  color: rgb(255, 255, 255);
+  color: grey;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 .preco {
-  color: rgb(0, 255, 76);
+  color: #4cc9f0;
   width: 100%;
   font-size: 1.2rem;
   font-weight: 700;
@@ -132,13 +141,5 @@ li {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: white;
-}
-
-.entrar-logout:hover{
-    color: aqua;
-}
-
-.cadastrar-logout:hover{
-    color: rgb(45, 255, 45);
+  color: grey;
 }

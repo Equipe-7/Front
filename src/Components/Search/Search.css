@@ -1,7 +1,7 @@
 .search{
     width: 100%;
     display: flex;
-    border: 2px solid rgba(0, 242, 250, 0.685);
+    border: 2px solid #7109b762;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .search-input::placeholder{
-    color: rgb(0, 174, 255);
+    color: grey;
 }
 
 .search-input:focus{
@@ -32,8 +32,7 @@
 
 
 .FaSearch{
-    color: white;
-    background-color: aqua;
+    color: #7209B7;
     padding: .3rem;
     font-size: 1.2rem;
     border-radius: 5px;

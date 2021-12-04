@@ -4,13 +4,13 @@ import Search from "./../Search/Search";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
 
   return (
     <div className="NavBar">
       <div className="navbar-logo">
         <img
-          src="https://www.seekpng.com/png/full/111-1117530_equipe-petiko-logo-cachorro-e-gato.png"
+          src="https://cdn.discordapp.com/attachments/915043608338513950/916463502389051423/sevenpets2.png"
           width="50%"
           alt=""
         />
