@@ -18,26 +18,36 @@ const NavBar = () => {
       <div className="navbar-menu">
         <Search />
         <ul className="navbar-itens">
-          <li className="navbar-list">Produtos
+          <li className="navbar-list">
+            Produtos
             <ul>
-                <li>Rações</li>
-                <li>Roupas</li>
-                <li>Casinhas</li>
+              <li>Brinquedos</li>
+              <li>Camas</li>
+              <li>Roupas e acessórios</li>
             </ul>
           </li>
-          <li className="navbar-list">Brinquedos
-          <ul>
-                <li>Cães</li>
-                <li>Gatos</li>
-                <li>Outros</li>
-            </ul></li>
-          <li className="navbar-list">Serviços
-          <ul>
-                <li>Hospedagens</li>
-                <li>Passeios</li>
-                <li>Cuidadores</li>
-            </ul></li>
-          <li className="navbar-list">Veterinarios</li>
+          <li className="navbar-list">
+            Serviços
+            <ul>
+              <li>hospedagem</li>
+              <li>Pet Walker "passeador"</li>
+              <li>Pet sister "cuidador a domicilio"</li>
+            </ul>
+          </li>
+          <li className="navbar-list">
+            Veterinarios
+            <ul>
+              <li>Clinica</li>
+              <li>Atendimento à domicílio</li>
+            </ul>
+          </li>
+          <li className="navbar-list">
+            Mais
+            <ul>
+              <li>Doações</li>
+              <li>Area de adoção</li>
+            </ul>
+          </li>
         </ul>
       </div>
       {logado ? (
@@ -53,8 +63,8 @@ const NavBar = () => {
         </div>
       ) : (
         <div className="logout">
-            <span className="entrar-logout">Entrar</span>
-            <span className="cadastrar-logout">Cadastrar</span>
+          <span className="entrar-logout">Entrar</span>
+          <span className="cadastrar-logout">Cadastrar</span>
         </div>
       )}
     </div>
