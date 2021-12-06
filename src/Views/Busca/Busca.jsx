@@ -12,7 +12,7 @@ const Busca = () => {
         <div className='busca-container'>
             <h3>Resultado de busca: </h3>
             <div className='resultado-busca'>
-
+                <span>{resultado}</span>
             </div>
         </div>
     )
