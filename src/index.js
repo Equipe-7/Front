@@ -7,7 +7,7 @@ import Card from './Components/Card/Card';
 import './index.css';
 import Busca from './Views/Busca/Busca';
 import Home from './Views/Home/Home';
-import Login from './Views/Login/Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -18,7 +18,6 @@ ReactDOM.render(
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
           <Route path="/busca" element={<Busca/>}/>
         </Routes>
         <Card />
