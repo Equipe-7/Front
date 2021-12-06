@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Search from "./../Search/Search";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(true);
+  const [logado, setLogado] = useState(false);
 
   return (
     <div className="NavBar">
       <div className="navbar-logo">
-        <img
-          src="https://cdn.discordapp.com/attachments/915043608338513950/916463502389051423/sevenpets2.png"
-          width="50%"
-          alt=""
-        />
+        <Link className="link-logo" to="/">
+          <img
+            src="https://cdn.discordapp.com/attachments/915043608338513950/916463502389051423/sevenpets2.png"
+            width="50%"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="navbar-menu">
         <Search />
@@ -63,8 +66,12 @@ const NavBar = () => {
         </div>
       ) : (
         <div className="logout">
-          <span className="entrar-logout">Entrar</span>
-          <span className="cadastrar-logout">Cadastrar</span>
+          <Link to="/cadastrar">
+            <span className="cadastrar-logout">Cadastrar</span>
+          </Link>
+          <Link to="/login">
+            <span className="entrar-logout">Entrar</span>
+          </Link>
         </div>
       )}
     </div>
