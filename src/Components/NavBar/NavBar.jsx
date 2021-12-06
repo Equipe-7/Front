@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ModalCadastro from "../Cadastro/Cadastro";
+import ModalLogin from "../Login/Login";
 import Search from "./../Search/Search";
 import "./NavBar.css";
 
+
 const NavBar = () => {
   const [logado, setLogado] = useState(false);
+  const [modalLoginShow, setModalLoginShow] = useState(false);
+  const [modalCadastroShow, setModalCadastroShow] = useState(false);
 
   return (
     <div className="NavBar">
@@ -66,12 +71,20 @@ const NavBar = () => {
         </div>
       ) : (
         <div className="logout">
-          <Link to="/cadastrar">
-            <span className="cadastrar-logout">Cadastrar</span>
-          </Link>
-          <Link to="/login">
-            <span className="entrar-logout">Entrar</span>
-          </Link>
+          <span className="cadastrar-logout" onClick={() => setModalCadastroShow(true)}>
+            Cadastrar
+          </span>
+          <ModalCadastro show={modalCadastroShow}
+            onHide={() => setModalCadastroShow(false)}
+          />
+
+          <span className="entrar-logout" onClick={() => setModalLoginShow(true)}>
+            Entrar
+          </span>
+          <ModalLogin
+            show={modalLoginShow}
+            onHide={() => setModalLoginShow(false)}
+          />
         </div>
       )}
     </div>
