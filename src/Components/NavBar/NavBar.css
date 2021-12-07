@@ -63,15 +63,15 @@ li {
   border-radius: 15px;
   border: 2px solid ;
   box-shadow: 0px 5px 9px -3px #00000060;
-
+  background: white;
   display: none;
   border-radius: 5px;
-  background-color: white;
+  z-index: 999;
 }
 
 .navbar-itens li ul li {
   position: relative;
-  left: -40px;
+  left: -30px;
   padding: 0.5rem;
   font-size: 0.9rem;
   color: grey;
