@@ -39,7 +39,7 @@ const NavBar = () => {
             <ul>
               <li>hospedagem</li>
               <li>Pet Walker "passeador"</li>
-              <li>Pet sister "cuidador a domicilio"</li>
+              <li>Pet Sitter "cuidador a domicilio"</li>
             </ul>
           </li>
           <li className="navbar-list">

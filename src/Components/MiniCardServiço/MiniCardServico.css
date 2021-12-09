@@ -1,0 +1,35 @@
+.mini-service{
+    border: 1px solid var(--roxoOpacity);
+    width: 180px;
+    border-radius: 5px;
+    margin: .5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mini-service div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mini-service h4{
+    font-size: 1rem;
+}
+
+.mini-texto{
+    font-size: .8rem;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.2rem;
+}
+
+.mini-btn{
+    background-color: var(--roxo);
+    padding: .6rem 2rem;
+    margin: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
