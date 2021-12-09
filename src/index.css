@@ -20,3 +20,9 @@ code {
 a{
   text-decoration: none;
 }
+
+:root{
+  --rosa: #f72585;
+  --roxo: #7209b7;
+  --roxoOpacity: #7109b762;
+}
