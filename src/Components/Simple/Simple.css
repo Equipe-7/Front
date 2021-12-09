@@ -1,0 +1,12 @@
+.container-simple{
+    background-color: #7209b7;
+    justify-content: space-between;
+}
+
+.container-simple ul {
+    justify-content: space-between !important;
+}
+
+.container-simple li{
+    width: 220px !important;
+}
