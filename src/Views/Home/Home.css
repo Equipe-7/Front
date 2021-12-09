@@ -1,0 +1,24 @@
+.home h4{
+    text-align: center;
+    color: #7109b7d7;
+    padding: .8rem;
+    font-size: 1.4rem;
+}
+
+.home h4 strong{
+    color: #f72585;
+    font-size: 2rem;
+}
+
+.servicos-mini{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.servicos h3{
+    color: #7109b7d7;
+    padding: 2rem 0 0 2rem;
+}
