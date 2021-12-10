@@ -6,7 +6,6 @@ import ModalLogin from "../Login/Login";
 import Search from "./../Search/Search";
 import "./NavBar.css";
 
-
 const NavBar = () => {
   const [logado, setLogado] = useState(false);
   const [modalLoginShow, setModalLoginShow] = useState(false);
@@ -52,8 +51,8 @@ const NavBar = () => {
           <li className="navbar-list">
             Mais
             <ul>
-              <li>Doações</li>
-              <li>Area de adoção</li>
+              <li>Perguntas Frequentes</li>
+              <li>Sobre</li>
             </ul>
           </li>
         </ul>
@@ -65,25 +64,29 @@ const NavBar = () => {
               <span className="car-nome">Jhonathan Pinheiro</span>
             </div>
             <FaShoppingCart className="carrinho" />
-            <span className="qtd">33</span>
+            <div className="qtd">
+              <span>33</span>
+            </div>
           </div>
           <span className="preco">R$700,00</span>
         </div>
       ) : (
         <div className="logout">
-          <span className="cadastrar-logout" onClick={() => setModalCadastroShow(true)}>
-            Cadastrar
+          <span
+            className="cadastrar-logout"
+            onClick={() => setModalCadastroShow(true)}
+          >
+            Cadastrar/Logar
           </span>
-          <ModalCadastro show={modalCadastroShow}
+          <div className="carro-itens">
+            <FaShoppingCart className="carrinho-lg" />
+            <div>
+              <span>7</span>
+            </div>
+          </div>
+          <ModalCadastro
+            show={modalCadastroShow}
             onHide={() => setModalCadastroShow(false)}
-          />
-
-          <span className="entrar-logout" onClick={() => setModalLoginShow(true)}>
-            Entrar
-          </span>
-          <ModalLogin
-            show={modalLoginShow}
-            onHide={() => setModalLoginShow(false)}
           />
         </div>
       )}

@@ -24,11 +24,12 @@ const Search = () => {
         <FaSearch className="FaSearch" />
       </label>
       <input
+        name="search"
         className="search-input"
         type="text"
-        placeholder="PESQUISAR PRODUTOS, SERVIÇOS, HOSPEDAGENS..."
         onChange={(e) => setPesquisa(e.target.value)}
       />
+      <label className="labe-sh" htmlFor="search">PESQUISAR PRODUTOS, SERVIÇOS, HOSPEDAGENS...</label>
     </form>
   );
 };

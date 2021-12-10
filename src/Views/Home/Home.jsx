@@ -8,15 +8,17 @@ import MiniCardPets from "../../Components/MiniCardPets/MiniCardPets";
 import ApiPets from "../../Api/ApiPetsHome";
 
 const Home = () => {
-
   return (
     <div className="home">
-      <h4 className="desconto"><strong>7% OFF</strong> NA SUA PRIMEIRA COMPRA</h4>
+      <h4 className="desconto">
+        <strong>7% OFF</strong> NA SUA PRIMEIRA COMPRA
+      </h4>
       <Banner />
+      {/* produtos */}
       <div className="servicos">
-        <h3>Principais Serviços</h3>
+        <h3>Produtos</h3>
         <div className="servicos-mini">
-          {ApiServicos.map((value) => (
+          {ApiProdutos.map((value) => (
             <MiniCardServico
               imagem={value.img}
               titulo={value.titulo}
@@ -26,27 +28,29 @@ const Home = () => {
           ))}
         </div>
       </div>
+      {/* pets */}
       <div className="servicos">
-        <h3>Principais Pets</h3>
+        <h3>Produtos por Pets</h3>
         <div className="container-principais">
-        {ApiPets.map((value) => (
+          {ApiPets.map((value) => (
             <MiniCardPets
-            imagem={value.img}
-            tipo={value.tipo}
-            btn={value.btn}
+              imagem={value.img}
+              tipo={value.tipo}
+              btn={value.btn}
             />
           ))}
         </div>
       </div>
+      {/* servicos */}
       <div className="servicos">
-        <h3>Principais Produtos</h3>
+        <h3>Serviços</h3>
         <div className="servicos-mini">
-          {ApiProdutos.map((value) => (
+          {ApiServicos.map((value) => (
             <MiniCardServico
-            imagem={value.img}
-            titulo={value.titulo}
-            texto={value.texto}
-            btn={value.btn}
+              imagem={value.img}
+              titulo={value.titulo}
+              texto={value.texto}
+              btn={value.btn}
             />
           ))}
         </div>
