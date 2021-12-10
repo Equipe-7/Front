@@ -1,12 +1,14 @@
-.home h4{
+.desconto{
+    background-color: var(--roxo);
     text-align: center;
-    color: #7109b7d7;
+    color: white;
     padding: .8rem;
     font-size: 1.4rem;
+    margin-bottom: 0;
 }
 
-.home h4 strong{
-    color: #f72585;
+.desconto strong{
+    color: var(--rosa);
     font-size: 2rem;
 }
 
@@ -21,4 +23,12 @@
 .servicos h3{
     color: #7109b7d7;
     padding: 2rem 0 0 2rem;
+}
+
+.container-principais{
+    background-color: var(--roxo);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }

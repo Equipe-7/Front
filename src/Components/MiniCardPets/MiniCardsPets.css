@@ -1,0 +1,42 @@
+.miniCardPet{
+    background-color: white;
+    width: 170px;
+    height: 200px;
+    border-radius: 5px;
+    margin: .7rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all 300ms;
+    position: relative;
+}
+
+.miniCardPet:hover{
+    transform: scale(.9);
+}
+
+.miniCardPet div{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.miniCardPet-img{
+    max-width: 70%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.mini-btn-pets{
+    background-color: var(--rosa);
+    padding: .4rem 1rem;
+    margin: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

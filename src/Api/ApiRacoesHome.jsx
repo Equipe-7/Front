@@ -1,4 +1,4 @@
-const Racoes = [
+const ApiRacoes = [
     {
         texto: "Ração Nestlé Purina Friskies Sachê Frango ao Molho para Gatos",
         valor: "99,99",
@@ -60,4 +60,4 @@ const Racoes = [
         
 ]
 
-export default Racoes
+export default ApiRacoes;
