@@ -2,13 +2,12 @@ import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ModalCadastro from "../Cadastro/Cadastro";
-import ModalLogin from "../Login/Login";
 import Search from "./../Search/Search";
 import "./NavBar.css";
 
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
   const [modalLoginShow, setModalLoginShow] = useState(false);
   const [modalCadastroShow, setModalCadastroShow] = useState(false);
 
@@ -27,33 +26,64 @@ const NavBar = () => {
         <Search />
         <ul className="navbar-itens">
           <li className="navbar-list">
-            Produtos
+            <Link to="/produtos" className="link-nav">
+              Produtos
+            </Link>
             <ul>
-              <li>Brinquedos</li>
-              <li>Camas</li>
-              <li>Roupas e acessórios</li>
+              <Link to="/produtos/brinquedos">
+                <li>Brinquedos</li>
+              </Link>
+              <Link to="/produtos/camas">
+                <li>Camas</li>
+              </Link>
+              <Link to="/produtos/roupas&acessorios">
+                <li>Roupas e acessórios</li>
+              </Link>
             </ul>
           </li>
           <li className="navbar-list">
-            Serviços
+            <Link to="/servicos" className="link-nav">
+              Serviços
+            </Link>
             <ul>
-              <li>hospedagem</li>
-              <li>Pet Walker "passeador"</li>
-              <li>Pet Sitter "cuidador a domicilio"</li>
+              <Link to="/servicos/hospedagem">
+                <li>hospedagem</li>
+              </Link>
+              <Link to="/servicos/petwalker">
+                <li>Pet Walker "passeador"</li>
+              </Link>
+              <Link to="/servicos/petsitter">
+                <li>Pet Sitter "cuidador a domicilio"</li>
+              </Link>
             </ul>
           </li>
           <li className="navbar-list">
-            Veterinarios
+            <Link to="/veterinarios" className="link-nav">
+              Veterinarios
+            </Link>
             <ul>
-              <li>Clinica</li>
-              <li>Atendimento à domicílio</li>
+              <Link to="/veterinarios/clinica">
+                <li>Clinica</li>
+              </Link>
+              <Link to="/veterinarios/domicilio">
+                <li>Atendimento à domicílio</li>
+              </Link>
             </ul>
           </li>
           <li className="navbar-list">
             Mais
             <ul>
+<<<<<<< Updated upstream
               <li>Doações</li>
               <li>Area de adoção</li>
+=======
+              <Link to="perguntas">
+                <li>Perguntas Frequentes</li>
+              </Link>
+              <Link to="sobre">
+                <li>Sobre</li>
+              </Link>
+>>>>>>> Stashed changes
             </ul>
           </li>
         </ul>
