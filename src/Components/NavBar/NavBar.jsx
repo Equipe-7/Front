@@ -51,8 +51,12 @@ const NavBar = () => {
           <li className="navbar-list">
             Mais
             <ul>
-              <li>Perguntas Frequentes</li>
-              <li>Sobre</li>
+              <Link to="perguntas">
+                <li>Perguntas Frequentes</li>
+              </Link>
+              <Link to="sobre">
+                <li>Sobre</li>
+              </Link>
             </ul>
           </li>
         </ul>
