@@ -18,6 +18,14 @@
   justify-content: center;
 }
 
+.link-nav{
+  color: var(--rosa);
+}
+
+.link-nav:hover{
+  color: var(--roxo);
+}
+
 .navbar-logo img {
   position: relative;
   width: 35%;

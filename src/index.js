@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Busca from './Views/Busca/Busca';
 import Home from './Views/Home/Home';
 import './index.css';
+import Produtos from './Views/Produtos/Produtos';
+import Servicos from './Views/Servicos/Servicos';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,8 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/busca" element={<Busca/>}/>
+          <Route path="/busca" element={<Produtos/>}/>
+          <Route path="/busca" element={<Servicos/>}/>
         </Routes>
         <Footer/>
       </>
