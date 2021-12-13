@@ -1,15 +1,12 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import ModalCadastro from "../Cadastro/Cadastro";
+import { FiUser } from "react-icons/fi";
 import Search from "./../Search/Search";
 import "./NavBar.css";
 
-
 const NavBar = () => {
-  const [logado, setLogado] = useState(true);
-  const [modalLoginShow, setModalLoginShow] = useState(false);
-  const [modalCadastroShow, setModalCadastroShow] = useState(false);
+  const [logado, setLogado] = useState(false);
 
   return (
     <div className="NavBar">
@@ -73,48 +70,47 @@ const NavBar = () => {
           <li className="navbar-list">
             Mais
             <ul>
-<<<<<<< Updated upstream
-              <li>Doações</li>
-              <li>Area de adoção</li>
-=======
               <Link to="perguntas">
                 <li>Perguntas Frequentes</li>
               </Link>
               <Link to="sobre">
                 <li>Sobre</li>
               </Link>
->>>>>>> Stashed changes
             </ul>
           </li>
         </ul>
       </div>
       {logado ? (
-        <div className="car">
-          <div className="car-dados">
-            <div className="car-texto">
-              <span className="car-nome">Jhonathan Pinheiro</span>
-            </div>
-            <FaShoppingCart className="carrinho" />
-            <span className="qtd">33</span>
+        <div className="navbar-user">
+        <div className="navbar-logout">
+          <FiUser className="navbar-icon" />
+          <div className="navbar-singinUp">
+            <span>Olá, Jhonathan</span>
+            <span>acessar dados</span>
           </div>
-          <span className="preco">R$700,00</span>
         </div>
+        <div navbar="navbar-car">
+          <FaShoppingCart className="car-icon" />
+          <div className="car-und">
+            <span>7</span>
+          </div>
+        </div>
+      </div>
       ) : (
-        <div className="logout">
-          <span className="cadastrar-logout" onClick={() => setModalCadastroShow(true)}>
-            Cadastrar
-          </span>
-          <ModalCadastro show={modalCadastroShow}
-            onHide={() => setModalCadastroShow(false)}
-          />
-
-          <span className="entrar-logout" onClick={() => setModalLoginShow(true)}>
-            Entrar
-          </span>
-          <ModalLogin
-            show={modalLoginShow}
-            onHide={() => setModalLoginShow(false)}
-          />
+        <div className="navbar-user">
+          <div className="navbar-logout">
+            <FiUser className="navbar-icon" />
+            <div className="navbar-singinUp">
+              <span>Olá, Entre</span>
+              <span>ou cadastre-se</span>
+            </div>
+          </div>
+          <div navbar="navbar-car">
+            <FaShoppingCart className="car-icon" />
+            <div className="car-und">
+              <span>0</span>
+            </div>
+          </div>
         </div>
       )}
     </div>

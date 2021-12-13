@@ -161,10 +161,59 @@ li {
   color: white;
 }
 
-.entrar-logout{
-  background-color: #7209b7;
+.navbar-user {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cadastrar-logout{
-  background-color: #f72585;
+.navbar-logout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.navbar-icon {
+  font-size: 1.8rem;
+  color: var(--rosa);
+}
+
+.navbar-singinUp {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem .5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--roxo);
+  background-color: var(--roxoOpacity);
+  border-radius: 5px;
+}
+
+.navbar-car {
+  display: flex;
+}
+
+.car-icon {
+  color: var(--roxo);
+  position: relative;
+  font-size: 2rem;
+  top: 15px;
+}
+
+.car-und {
+  background-color: var(--rosa);
+  color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  top: -35px;
+  left: 18px;
+  font-size: 1.3rem;
+  font-weight: 900;
 }
