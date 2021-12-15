@@ -12,7 +12,7 @@ const Home = () => {
       <h4><strong>7% OFF</strong> NA SUA PRIMEIRA COMPRA</h4>
       <Banner />
       <div className="servicos">
-        <h3>Nossos Serviços</h3>
+        <h3>Serviços</h3>
         <div className="servicos-mini">
           {ApiServicos.map((value) => (
             <MiniCardServico
@@ -25,7 +25,7 @@ const Home = () => {
         </div>
       </div>
       <div className="servicos">
-        <h3>Nossos Produtos</h3>
+        <h3>Produtos</h3>
         <div className="servicos-mini">
           {ApiProdutos.map((value) => (
             <MiniCardServico

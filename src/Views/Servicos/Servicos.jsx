@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Servicos.css"
-import CardLoja from "./../../Components/Card/Card";
+import CardProduto from "./../../Components/Card/CardsProdutos/Card";
 import axios from "axios";
 
 
@@ -25,7 +25,7 @@ const Servicos = () => {
     return (
       <div className="resultado-busca">
         {resultado.map((v) => (
-          <CardLoja
+          <CardProduto
             id={v.service_id}
             imagem={v.urlImage}
             texto={v.service_name}

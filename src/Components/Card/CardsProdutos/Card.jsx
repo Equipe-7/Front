@@ -1,7 +1,7 @@
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-const CardLoja = (props) => {
+const CardProduto = (props) => {
   return (
     <Link className="img-produto" to="/login">
       <div className="miniCard">
@@ -25,4 +25,4 @@ const CardLoja = (props) => {
   );
 };
 
-export default CardLoja;
+export default CardProduto
