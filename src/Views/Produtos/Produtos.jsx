@@ -1,12 +1,41 @@
-import React from 'react'
-import "./Produtos.css"
+import React, { useEffect } from "react";
+import "./Produtos.css";
+import axios from "axios";
+import { useState } from "react";
+import CardLoja from "./../../Components/Card/Card";
+import Resultado from "../../Components/Resultado/Resultado";
 
 const Produtos = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const [resultado, setResult] = useState([]);
+  const [mounted, setMounted] = useState(false);
 
-export default Produtos
+  async function getProduct() {
+    try {
+      const response = await axios.get("/products");
+      setResult(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    setMounted(true);
+    getProduct();
+  }, [mounted]);
+
+  return (
+    <Resultado>
+      {resultado.map((v) => (
+        <CardLoja
+          id={v.product_id}
+          imagem={v.urlImage}
+          texto={v.product_name}
+          valor={v.price}
+          key={v.id}
+        />
+      ))}
+    </Resultado>
+  );
+};
+
+export default Produtos;

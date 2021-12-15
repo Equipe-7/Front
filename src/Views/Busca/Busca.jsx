@@ -1,21 +1,19 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import { useLocation } from "react-router-dom";
+import "./Busca.css";
 
 const Busca = () => {
-    const state = useLocation()
-    const resultado = state.state;
+  const state = useLocation();
+  const resultado = state.state;
 
-    console.log(resultado)
+  return (
+    <div className="busca-container">
+      <h3>Resultado de busca: </h3>
+      <div className="resultado-busca">
 
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div className='busca-container'>
-            <h3>Resultado de busca: </h3>
-            <div className='resultado-busca'>
-                <span>{resultado}</span>
-            </div>
-        </div>
-    )
-}
-
-export default Busca
+export default Busca;

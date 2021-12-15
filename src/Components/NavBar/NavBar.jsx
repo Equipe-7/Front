@@ -15,7 +15,7 @@ const NavBar = () => {
           <img
             src="https://cdn.discordapp.com/attachments/915043608338513950/916463502389051423/sevenpets2.png"
             width="50%"
-            alt=""
+            alt="logo"
           />
         </Link>
       </div>
