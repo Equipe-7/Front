@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import "./Servicos.css"
-import CardLoja from "./../../Components/Card/Card";
+import React, { useEffect } from "react";
+import "./Brinquedos.css";
 import axios from "axios";
+import { useState } from "react";
+import CardLoja from "../../../Components/Card/Card"
+import Resultado from "../../../Components/Resultado/Resultado";
 
-
-const Servicos = () => {
+const Brinquedos = () => {
     const [resultado, setResult] = useState([]);
     const [mounted, setMounted] = useState(false);
   
-    async function getService() {
+    async function getProduct() {
       try {
-        const response = await axios.get("/services");
+        const response = await axios.get("/products/");
         setResult(response.data);
       } catch (error) {
         console.error(error);
@@ -19,22 +20,22 @@ const Servicos = () => {
   
     useEffect(() => {
       setMounted(true);
-      getService();
+      getProduct();
     }, [mounted]);
   
     return (
-      <div className="resultado-busca">
+      <Resultado>
         {resultado.map((v) => (
           <CardLoja
-            id={v.service_id}
+            id={v.product_id}
             imagem={v.urlImage}
-            texto={v.service_name}
+            texto={v.product_name}
             valor={v.price}
             key={v.id}
           />
         ))}
-      </div>
+      </Resultado>
     );
   };
 
-export default Servicos
+export default Brinquedos

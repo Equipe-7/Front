@@ -1,0 +1,10 @@
+.resultado{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+    height: 100vh;
+    margin: 1rem auto;
+    border: 1px solid var(--roxoOpacity);
+    border-radius: 5px;
+    padding: 2rem;
+}

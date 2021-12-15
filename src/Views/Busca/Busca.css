@@ -1,4 +1,9 @@
 .busca-container{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    padding: 1rem;
+}
+
+.busca-container h3{
+    color: var(--roxoOpacity);
 }
