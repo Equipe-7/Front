@@ -3,10 +3,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FiUser } from "react-icons/fi";
 import Search from "./../Search/Search";
+import ModalLoginRegister from "./../Login-Register/Login-Register";
 import "./NavBar.css";
 
 const NavBar = () => {
   const [logado, setLogado] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <div className="NavBar">
@@ -82,28 +84,31 @@ const NavBar = () => {
       </div>
       {logado ? (
         <div className="navbar-user">
-        <div className="navbar-logout">
-          <FiUser className="navbar-icon" />
-          <div className="navbar-singinUp">
-            <span>Olá, Jhonathan</span>
-            <span>acessar dados</span>
+          <div className="navbar-logout">
+            <FiUser className="navbar-icon" />
+            <div className="navbar-singinUp">
+              <span>Olá, Jhonathan</span>
+              <span>acessar dados</span>
+            </div>
+          </div>
+          <div navbar="navbar-car">
+            <FaShoppingCart className="car-icon" />
+            <div className="car-und">
+              <span>7</span>
+            </div>
           </div>
         </div>
-        <div navbar="navbar-car">
-          <FaShoppingCart className="car-icon" />
-          <div className="car-und">
-            <span>7</span>
-          </div>
-        </div>
-      </div>
       ) : (
         <div className="navbar-user">
           <div className="navbar-logout">
             <FiUser className="navbar-icon" />
-            <div className="navbar-singinUp">
+            <div className="navbar-singinUp" onClick={()=> setModalShow(true)}>
               <span>Olá, Entre</span>
               <span>ou cadastre-se</span>
             </div>
+            <ModalLoginRegister
+            show={modalShow}
+            onHide={() => setModalShow(false)} />
           </div>
           <div navbar="navbar-car">
             <FaShoppingCart className="car-icon" />
