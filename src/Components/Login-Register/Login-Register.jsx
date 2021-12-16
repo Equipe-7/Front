@@ -8,7 +8,7 @@ function ModalLoginRegister(props,True) {
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('')
-  const [surname, setSurname] = useState('')
+  const [CPF, setCPF] = useState('');
   const [password, setPassword] = useState('');
   const [showPass, setShowPass] = useState(true)
   const [loginRegister, setLoginRegister]= useState(True)
@@ -69,11 +69,11 @@ function ModalLoginRegister(props,True) {
           </Modal.Header>
           <Modal.Body>
             <form className="form-login" onSubmit={handleSubmitLogin}>
-              <input className="input-login input-email" type="email" 
+              <input required className="input-login input-email" type="email" 
               onChange={(event) => {setEmail(event.target.value)}}  />
               <label className={`label-email ${email !== '' ? 'label-fixed-email' : ''}`}>Digite seu email*</label>
 
-              <input className="input-login input-password" type={!showPass? 'text': 'password'}
+              <input required className="input-login input-password" type={!showPass? 'text': 'password'}
               onChange={(event) => {setPassword(event.target.value)}} />
               <label className={`label-password ${password !== '' ? 'label-fixed-password' : ''}`}>Digite sua senha*</label>
               
@@ -111,18 +111,18 @@ function ModalLoginRegister(props,True) {
           
           <Modal.Body>
             <form className="form-login" onSubmit={handleSubmitLogin}>
-              <input className="input-login input-email" type="email" 
+              <input required className="input-login input-email" type="email" 
               onChange={(event) => {setEmail(event.target.value)}}  />
               <label className={`label-email ${email !== '' ? 'visibility-label' : ''}`}>Digite seu email*</label>
               
               <div className='name'>
-                <input className="input-login input-name" type="text" 
+                <input  required className="input-login input-name" type="text" 
                 onChange={(event) => {setName(event.target.value)}}  />
                 <label className={`label-name ${name !== '' ? 'visibility-label' : ''}`}>Nome*</label>
 
-                <input className="input-login input-surname" type="text" 
-                onChange={(event) => {setSurname(event.target.value)}}  />
-                <label className={`label-surname ${surname !== '' ? 'visibility-label' : ''}`}>Sobrenome*</label>
+                <input className="input-login input-cpf" type="text" 
+                onChange={(event) => {setCPF(event.target.value)}}  />
+                <label className={`label-CPF ${CPF !== '' ? 'visibility-label' : ''}`}>Sobrenome*</label>
 
 
               </div>
@@ -130,7 +130,7 @@ function ModalLoginRegister(props,True) {
 
               <input className="input-login input-password" type={!showPass? 'text': 'password'}
               onChange={(event) => {setPassword(event.target.value)}} />
-              <label className={`label-password ${password !== '' ? 'visibility-label' : ''}`}>Digite sua senha*</label>
+              <label className={`label-password ${password !== '' ? 'visibility-label' : ''}`}>Crie uma senha*</label>
               
               { showPass ? 
                 <div onClick={ togleShowHidePassword } className='show-password'>
@@ -145,7 +145,7 @@ function ModalLoginRegister(props,True) {
               
               <spam className="conta">Já tem uma conta? <spam onClick={togleLoginRegister } className='criar-conta' href='/'>Faça Login</spam></spam>
               
-              <button className="btn-login" type='submit'> Entrar </button>
+              <button className="btn-login" type='submit'> Cadastrar </button>
             </form>
           </Modal.Body>
         </Modal>
