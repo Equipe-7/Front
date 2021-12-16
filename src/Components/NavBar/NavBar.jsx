@@ -102,7 +102,7 @@ const NavBar = () => {
         <div className="navbar-user">
           <div className="navbar-logout">
             <FiUser className="navbar-icon" />
-            <div className="navbar-singinUp">
+            <div className="navbar-singinUp" onClick={()=> setModalShow(true)}>
               <span>Olá, Entre</span>
               <span>ou cadastre-se</span>
             </div>
