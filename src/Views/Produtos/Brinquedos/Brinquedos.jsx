@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Brinquedos.css";
 import axios from "axios";
 import { useState } from "react";
-import CardLoja from "../../../Components/Card/Card"
+import CardLoja from "../../../Components/Card/CardsProdutos/Card"
 import Resultado from "../../../Components/Resultado/Resultado";
 
 const Brinquedos = () => {

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Produtos.css";
 import axios from "axios";
 import { useState } from "react";
-import CardLoja from "./../../Components/Card/Card";
+import CardProduto from "./../../Components/Card/CardsProdutos/Card";
 import Resultado from "../../Components/Resultado/Resultado";
 
 const Produtos = () => {
@@ -26,7 +26,7 @@ const Produtos = () => {
   return (
     <Resultado>
       {resultado.map((v) => (
-        <CardLoja
+        <CardProduto
           id={v.product_id}
           imagem={v.urlImage}
           texto={v.product_name}
