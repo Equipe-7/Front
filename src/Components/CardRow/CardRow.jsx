@@ -1,8 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
 import Racoes from '../../apiTest/apiRacoes';
 import "./CardRow.css";
 
@@ -22,7 +21,7 @@ export default (props) => {
     let x = scrollX - Math.round(window.innerWidth / 2);
     let listW = Racoes.length * 150;
     if ((window.innerWidth - listW) > x) {
-      x = (window.innerWidth - listW) - 130;
+      x = (window.innerWidth - listW) - 450;
     }
     setScrollX(x)
   }
@@ -31,10 +30,10 @@ export default (props) => {
   return (
     <div className="cardRow">
       <div className="cardRow--left" onClick={handleLeftArrow}>
-        <ArrowBackIosNewIcon style={{ fontSize: 50 }} />
+        <BiLeftArrow style={{ fontSize: 50 }} />
       </div>
       <div className="cardRow--rigth" onClick={handleRigthArrow}>
-        <ArrowForwardIosIcon style={{ fontSize: 50 }} />
+        <BiRightArrow style={{ fontSize: 50 }} />
       </div>
 
       <div className="cardRow--listarea">

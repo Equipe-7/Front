@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../Components/Banner/Banner";
+import CardRow from '../.././Components/CardRow/CardRow';
 import MiniCardServico from "../../Components/MiniCardServiço/MiniCardServico";
 import "./Home.css";
 import ApiServicos from "../../Api/ApiServicosHome";
@@ -11,6 +12,7 @@ const Home = () => {
     <div className="home">
       <h4><strong>7% OFF</strong> NA SUA PRIMEIRA COMPRA</h4>
       <Banner />
+      <CardRow />
       <div className="servicos">
         <h3>Serviços</h3>
         <div className="servicos-mini">
@@ -29,10 +31,10 @@ const Home = () => {
         <div className="servicos-mini">
           {ApiProdutos.map((value) => (
             <MiniCardServico
-            imagem={value.img}
-            titulo={value.titulo}
-            texto={value.texto}
-            btn={value.btn}
+              imagem={value.img}
+              titulo={value.titulo}
+              texto={value.texto}
+              btn={value.btn}
             />
           ))}
         </div>
