@@ -106,6 +106,9 @@ const NavBar = () => {
               <span>Olá, Entre</span>
               <span>ou cadastre-se</span>
             </div>
+            <ModalLoginRegister
+            show={modalShow}
+            onHide={() => setModalShow(false)} />
           </div>
           <div navbar="navbar-car">
             <FaShoppingCart className="car-icon" />
