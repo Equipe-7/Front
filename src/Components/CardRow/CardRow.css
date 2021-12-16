@@ -1,0 +1,63 @@
+.cardRow{
+  margin-bottom: 30px;
+  padding-top: 3rem;
+}
+
+.cardRow--listarea{
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+.cardRow--list{
+  transition: All ease 0.5s;
+}
+.cardRow--item{
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+
+.cardRow--item img{
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+.cardRow--item img:hover{
+  transform: scale(1);
+}
+
+.cardRow--left, .cardRow--rigth {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.007);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: All ease 0.5s;
+  margin: 2rem;
+}
+.cardRow--left {
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.322);
+  opacity: 0;
+  transition: All ease 0.5s;
+}
+.cardRow--rigth {
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.322);
+  opacity: 0;
+  transition: All ease 0.5s;
+}
+
+.cardRow:hover .cardRow--left {
+  opacity: 1;
+}
+
+.cardRow:hover .cardRow--rigth {
+  opacity: 1;
+}
