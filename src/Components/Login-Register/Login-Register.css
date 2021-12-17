@@ -17,6 +17,16 @@
   flex-direction: column;
 }
 
+.modal-header-register {
+  border: none !important;
+  background-image: url("../../Assets/img/register.png");
+  height: 150px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+}
+
 .modal-body {
   display: flex;
   flex-direction: column;
@@ -34,6 +44,10 @@
   line-height: 1.5 !important;
   font-size: 1.5rem !important;
   color: white;
+}
+
+.modal-title-register {
+visibility: hidden;
 }
 
 .form-login {
@@ -110,6 +124,87 @@
   background-color: white;
   font-size: 12px;
   top: 81px;
+  visibility: visible !important;
+}
+
+.label-name {
+  pointer-events: none;
+  position: absolute;
+  top: calc(11.5% - 15px);
+  left: 15px;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.input-name:focus + .label-name{
+  background-color: white;
+  font-size: 12px;
+  top: 6px;
+  color: var(--rosa);
+  visibility: visible !important;
+}
+
+.label-fixed-name {
+  background-color: white;
+  font-size: 12px;
+  top: 6px;
+  visibility: visible !important;
+}
+
+.label-email-register {
+  pointer-events: none;
+  position: absolute;
+  top: calc(34% - 15px);
+  left: 15px;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.input-email-register:focus + .label-email-register{
+  background-color: white;
+  font-size: 12px;
+  top: 81px;
+  color: var(--rosa);
+  visibility: visible !important;
+}
+
+.label-fixed-email-register {
+  background-color: white;
+  font-size: 12px;
+  top: 81px;
+  visibility: visible !important;
+}
+
+.label-password-register {
+  pointer-events: none;
+  position: absolute;
+  top: calc(56% - 15px);
+  left: 15px;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.input-password-register:focus + .label-password-register {
+  background-color: white;
+  font-size: 12px;
+  top: 157px;
+  color: var(--rosa);
+  visibility: visible !important;
+}
+
+.label-fixed-password-register {
+  background-color: white;
+  font-size: 12px;
+  top: 157px;
   visibility: visible !important;
 }
 
