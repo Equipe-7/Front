@@ -103,34 +103,27 @@ function ModalLoginRegister(props,True) {
         aria-labelledby="contained-modal-title-vcenter"
         centered 
         >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Header className= "modal-header-register" closeButton>
+            <Modal.Title  className= "modal-title-register" id="contained-modal-title-vcenter">
               Cadastrar
             </Modal.Title>
           </Modal.Header>
           
           <Modal.Body>
             <form className="form-login" onSubmit={handleSubmitLogin}>
-              <input required className="input-login input-email" type="email" 
-              onChange={(event) => {setEmail(event.target.value)}}  />
-              <label className={`label-email ${email !== '' ? 'visibility-label' : ''}`}>Digite seu email*</label>
-              
-              <div className='name'>
+                            
                 <input  required className="input-login input-name" type="text" 
                 onChange={(event) => {setName(event.target.value)}}  />
-                <label className={`label-name ${name !== '' ? 'visibility-label' : ''}`}>Nome*</label>
+                <label className={`label-name ${name !== '' ? 'label-fixed-name' : ''}`}> Seu Nome*</label>
 
-                <input className="input-login input-cpf" type="text" 
-                onChange={(event) => {setCPF(event.target.value)}}  />
-                <label className={`label-CPF ${CPF !== '' ? 'visibility-label' : ''}`}>Sobrenome*</label>
-
-
-              </div>
+                <input required className="input-login input-email-register" type="email" 
+                onChange={(event) => {setEmail(event.target.value)}}  />
+                <label className={`label-email-register ${email !== '' ? 'label-fixed-email-register' : ''}`}>Digite seu email*</label>
               
 
-              <input className="input-login input-password" type={!showPass? 'text': 'password'}
-              onChange={(event) => {setPassword(event.target.value)}} />
-              <label className={`label-password ${password !== '' ? 'visibility-label' : ''}`}>Crie uma senha*</label>
+                <input className="input-login input-password-register" type={!showPass? 'text': 'password'}
+                onChange={(event) => {setPassword(event.target.value)}} />
+                <label className={`label-password-register ${password !== '' ? 'label-fixed-password-register' : ''}`}>Crie uma senha*</label>
               
               { showPass ? 
                 <div onClick={ togleShowHidePassword } className='show-password'>
