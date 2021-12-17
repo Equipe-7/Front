@@ -68,6 +68,9 @@
   font-size: 1.2rem;
 }
 
+.card-produtos:hover .contentBx  span{
+  color: black;
+}
 
 .card-produtos:hover .contentBx .size {
   opacity: 1;

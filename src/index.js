@@ -20,6 +20,7 @@ import Clinicas from "./Views/Veterinarios/Clinicas/Clinicas";
 import Domicilio from "./Views/Veterinarios/Domicilio/Domicilio";
 
 import axios from 'axios';
+import Item from './Views/Item/Item';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -32,6 +33,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/busca" element={<Busca />} />
+          <Route path="/item" element={<Item />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/produtos/brinquedos" element={<Brinquedos />} />
           <Route path="/produtos/camas" element={<Camas />} />
