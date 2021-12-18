@@ -2,27 +2,23 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const CardProduto = (props) => {
+  console.log(props);
   return (
     <Link className="img-produto" to="/login">
-      <div className="miniCard">
-        <img
-          className="img"
-          src={props.imagem}
-          width="224"
-          height="224"
-          alt={props.texto}
-        />
-        <div className="informacao">
-          <div className="informacao-texto">
-            <p className="decricao-texto">{props.texto}</p>
+      <div class="card-produtos">
+        <div class="imgBx">
+          <img src={props.imagem}/>
+        </div>
+        <div class="contentBx">
+          <h2>{props.texto}</h2>
+          <div class="color">
+            <h3>R${props.valor}</h3>
           </div>
-          <div className="price">
-              <span className="price-item">R${props.valor}</span>
-          </div>
+          <a href="#">Comprar</a>
         </div>
       </div>
     </Link>
   );
 };
 
-export default CardProduto
+export default CardProduto;
