@@ -3,15 +3,15 @@ import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import"./Login-Register.css"
 import { FaEye,FaEyeSlash } from "react-icons/fa";
+import axios from 'axios';
 
-function ModalLoginRegister(props,True) {
+function ModalLoginRegister(props) {
 
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('')
-  const [CPF, setCPF] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [showPass, setShowPass] = useState(true)
-  const [loginRegister, setLoginRegister]= useState(True)
+  const [loginRegister, setLoginRegister]= useState(true)
 
   const handleSubmitLogin = event => {
     event.preventDefault();
@@ -25,31 +25,33 @@ function ModalLoginRegister(props,True) {
     // .then(response => {
     //   const token = response.data.token;
     //   localStorage.setItem('token', token)
-    // })
+  
   }
 
   const handleSubmitRegister = event => {
     event.preventDefault();
 
     const register = {
+      name: name,
       email: email,
       password: password,
     }
 
-    // axios.post('/auth/login', login)
-    // .then(response => {
-    //   const token = response.data.token;
-    //   localStorage.setItem('token', token)
-    // })
+    axios.post('/user', register)
   }
   
   const togleShowHidePassword= ()=>{
     setShowPass(!showPass)
   }
   
-  const togleLoginRegister= ()=>{
-
-    setLoginRegister(!loginRegister)
+  const togleRegisterLogin= ()=>{
+    const form = document.querySelector('.form-login')
+    form.reset();
+    setEmail('');
+    setPassword('');
+    setName('');
+    
+    setLoginRegister(!loginRegister);  
   }
 
   return (
@@ -88,9 +90,9 @@ function ModalLoginRegister(props,True) {
                 <span className='password-text'> esconder </span>
               </div> }
               
-              <spam className="conta">Não tem uma conta? <spam onClick={togleLoginRegister } className='criar-conta' href='/'> Crie uma nova conta </spam></spam>
+              <spam className="conta">Não tem uma conta? <spam onClick={ togleRegisterLogin } className='criar-conta' href='/'> Crie uma nova conta </spam></spam>
               
-              <button className="btn-login" type='submit'> Cadastrar </button>
+              <button className="btn-login" type='submit'> Entar </button>
             </form>
           </Modal.Body>
         </Modal>
@@ -136,7 +138,7 @@ function ModalLoginRegister(props,True) {
                 <span className='password-text'> esconder </span>
               </div> }
               
-              <spam className="conta">Já tem uma conta? <spam onClick={togleLoginRegister } className='criar-conta' href='/'>Faça Login</spam></spam>
+              <spam className="conta">Já tem uma conta? <spam onClick={ togleRegisterLogin } className='criar-conta' href='/'>Faça login</spam></spam>
               
               <button className="btn-login" type='submit'> Cadastrar </button>
             </form>
