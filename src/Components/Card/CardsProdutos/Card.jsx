@@ -18,7 +18,7 @@ const CardProduto = (props) => {
         <div class="color">
           <h3>R${props.valor}</h3>
         </div>
-        <a href="#">Comprar</a>
+        <a href="#">Adicionar</a>
       </div>
     </div>
   );
