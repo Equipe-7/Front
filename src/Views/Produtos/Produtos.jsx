@@ -32,6 +32,7 @@ const Produtos = () => {
           texto={v.product_name}
           valor={v.price}
           key={v.id}
+          description={v.description}
         />
       ))}
     </Resultado>
