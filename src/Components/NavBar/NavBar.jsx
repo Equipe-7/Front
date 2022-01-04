@@ -5,7 +5,7 @@ import { FiUser } from "react-icons/fi";
 import Search from "./../Search/Search";
 import ModalLoginRegister from "./../Login-Register/Login-Register";
 import "./NavBar.css";
-import Logo from "../../Assets/img/logo.jpg";
+import Logo from "../../Assets/img/sevenpets2.png";
 
 const NavBar = () => {
   const [logado, setLogado] = useState(false);
@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className="NavBar">
       <div className="navbar-logo">
         <Link className="link-logo" to="/">
-          <img src={Logo} width="50%" alt="logo" />
+          <img src={Logo} width="40%" alt="logo" />
         </Link>
       </div>
       <div className="navbar-menu">
