@@ -5,6 +5,7 @@ import { FiUser } from "react-icons/fi";
 import Search from "./../Search/Search";
 import ModalLoginRegister from "./../Login-Register/Login-Register";
 import "./NavBar.css";
+import Logo from "../../Assets/img/logo.jpg";
 
 const NavBar = () => {
   const [logado, setLogado] = useState(false);
@@ -14,11 +15,7 @@ const NavBar = () => {
     <div className="NavBar">
       <div className="navbar-logo">
         <Link className="link-logo" to="/">
-          <img
-            src="https://cdn.discordapp.com/attachments/915043608338513950/916463502389051423/sevenpets2.png"
-            width="50%"
-            alt="logo"
-          />
+          <img src={Logo} width="50%" alt="logo" />
         </Link>
       </div>
       <div className="navbar-menu">
@@ -102,13 +99,14 @@ const NavBar = () => {
         <div className="navbar-user">
           <div className="navbar-logout">
             <FiUser className="navbar-icon" />
-            <div className="navbar-singinUp" onClick={()=> setModalShow(true)}>
+            <div className="navbar-singinUp" onClick={() => setModalShow(true)}>
               <span>Olá, Entre</span>
               <span>ou cadastre-se</span>
             </div>
             <ModalLoginRegister
-            show={modalShow}
-            onHide={() => setModalShow(false)} />
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </div>
           <div navbar="navbar-car">
             <FaShoppingCart className="car-icon" />
