@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../../Assets/img/sevenpets-h2.png";
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -12,54 +13,35 @@ const Footer = () => {
         </div>
 
         <div className="footer-itens">
+          
           <ul className="itens-container">
-            <h3 className="item-title"> Titulo</h3>
+            <h3 className="item-title"> Sobre</h3>
             <li className="item">
-              <a>footer item</a>
+              <a>Conheça a 7 Pets</a>
             </li>
             <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
+              <a>A Equipe 7</a>
             </li>
           </ul>
 
           <ul className="itens-container">
-            <h3 className="item-title"> Titulo</h3>
+            <h3 className="item-title">Empreenda com a 7Pets</h3>
             <li className="item">
-              <a>footer item</a>
+              <a>Seja um prestador de serviços pet</a>
             </li>
             <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-          </ul>
-
-          <ul className="itens-container">
-            <h3 className="item-title"> Titulo</h3>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
-            </li>
-            <li className="item">
-              <a>footer item</a>
+              <a>Venda na 7Pets - Cadastre sua empresa</a>
             </li>
           </ul>
         </div>
+
+        <div className='social'>
+          <a href='https://www.facebook.com/OriginInsider' target="blank"><FaFacebookSquare className='social-item'/></a>
+          <a href='https://www.instagram.com/eaoriginals/' target="blank"><FaInstagramSquare className='social-item' /></a>
+          <a href='https://twitter.com/origininsider' target="blank"><FaTwitterSquare className='social-item'/></a>
+          <a href='https://www.youtube.com/channel/UCXWUa9LL0XXeqBcTCRAkVfg ' target="blank"><FaYoutubeSquare className='social-item' /></a>
+        </div>
+        
       </section>
     </footer>
   );
