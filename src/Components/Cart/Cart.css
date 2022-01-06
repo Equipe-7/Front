@@ -1,0 +1,28 @@
+.cart-item-modal{
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    padding-bottom: 1rem;
+}
+
+.cart-item-modal img{
+    width: 15%;
+    height: 100%;
+}
+
+.cart-item-modal div{
+    width: 60%;
+}
+
+.cart-item-modal button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    color: red;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-radius: 25px;
+}

@@ -8,7 +8,7 @@ import "./NavBar.css";
 import Logo from "../../Assets/img/sevenpets2.png";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
   const [modalShow, setModalShow] = useState(false);
 
   return (
@@ -89,7 +89,9 @@ const NavBar = () => {
             </div>
           </div>
           <div navbar="navbar-car">
-            <FaShoppingCart className="car-icon" />
+            <Link to="/carrinho">
+              <FaShoppingCart className="car-icon" />
+            </Link>
             <div className="car-und">
               <span>7</span>
             </div>
