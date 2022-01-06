@@ -1,3 +1,156 @@
-footer{
-    width: 100vh;
+.footer {
+  width: 100%;
+  min-height: 350px;
+  margin-top: 5rem;
+  display: flex;
+  background: url("../../Assets/img/sevenanimals.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px -15px 9px -10px rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0px -15px 9px -10px rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0px -15px 9px -10px rgba(0, 0, 0, 0.18);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1250px;
+  min-height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  margin-left: -25vw;
+  padding: 4vw 0vw 3vw;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: -0.4rem;
+}
+
+.logo-img {
+  width: 250px;
+}
+
+.logo-slogan {
+  font-size: calc(.8rem + 0.9vw) !important ;
+  color: var(--rosa);
+}
+
+.footer-itens {
+  display: flex;
+  width: 68%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.itens-container {
+  margin: 0px;
+  padding: 0px;
+  padding-right: 7vw;
+}
+
+.item-title {
+  margin-bottom: -6px;
+  color: var(--rosa);
+}
+
+.item {
+  color: var(--roxo);
+  cursor: pointer;
+  font-size: calc(0.7rem + 0.9vw) !important;
+}
+
+.item:hover {
+  color: var(--rosa);
+}
+
+@media screen and (max-width: 1284px) {
+  .footer {
+    width: 100%;
+    min-height: 350px;
+    margin-top: 5rem;
+    display: flex;
+    background: url("../../Assets/img/sevenanimals.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .footer-container {
+    width: 100%;
+    max-width: 80%;
+    min-height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .footer-itens {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo-slogan {
+    text-align: center;
+  }
+
+  .itens-container {
+    margin: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .footer {
+    width: 100%;
+    min-height: 350px;
+    margin-top: 5rem;
+    display: flex;
+    background: white !important;
+    align-items: center;
+  }
+
+  .footer-container {
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .footer-itens {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
 }
