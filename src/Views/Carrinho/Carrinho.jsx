@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cart from "../../Components/Cart/Cart";
 import "./Carrinho.css";
-import Racoes from "../../apiTest/apiRacoes"
+import Racoes from "../../apiTest/apiRacoes2"
 
 const Carrinho = () => {
   const [active, setActive] = useState("cart");

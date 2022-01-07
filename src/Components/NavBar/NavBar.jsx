@@ -8,7 +8,7 @@ import "./NavBar.css";
 import Logo from "../../Assets/img/sevenpets2.png";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(true);
+  const [logado, setLogado] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
   return (
