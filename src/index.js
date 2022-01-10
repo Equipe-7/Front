@@ -23,7 +23,7 @@ import axios from 'axios';
 import Item from './Views/Item/Item';
 import Carrinho from './Views/Carrinho/Carrinho';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'http://localhost:3000';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
