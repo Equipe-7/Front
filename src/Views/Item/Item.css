@@ -59,11 +59,10 @@
     font-size: 3rem;
 }
 
-
 .item-container .item-box .item-comprar .item-btn-box .item-btn{
     color: white;
     border: none;
-    padding: .7rem 1.5rem;
+    padding: .6rem 1.5rem;
     width: 150px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -72,13 +71,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 15px auto;
+    margin: 2px auto;
 }
 
 .item-container .item-box .item-comprar .item-btn-box button:nth-child(1){
     background-color: var(--rosa);
-}
-
-.item-container .item-box .item-comprar .item-btn-box button:nth-child(2){
-    background-color: var(--roxo);
 }

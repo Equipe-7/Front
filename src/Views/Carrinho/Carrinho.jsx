@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CarrinhoContext } from "../../Context/carrinho";
 import Cart from "../../Components/Cart/Cart";
+import { Entrega } from "../Entrega/Entrega";
+import { Pagamento } from "../Pagamento/Pagamento";
 import "./Carrinho.css";
-import Racoes from "../../apiTest/apiRacoes2"
 
 const Carrinho = () => {
   const [active, setActive] = useState("cart");
+
+  const { produtos } = useContext(CarrinhoContext);
+
+  let totalProdutos = 0
+
+  produtos.map((v,i) => (
+    totalProdutos = totalProdutos + produtos[i].valor
+  ))
+
+  
 
   return (
     <div className="carrinho-container">
@@ -30,16 +42,19 @@ const Carrinho = () => {
       </ul>
       {active === "cart" && (
         <div className="cart-container">
-          {Racoes.map((produto) => (
-            <Cart img={produto.url}
-            name={produto.texto}
-            price={produto.valor}
-            qtd="1"/>
+          <div className="total-produtos">Total: R$ {totalProdutos}</div>
+          {produtos.map((produto) => (
+            <Cart
+              img={produto.imagem}
+              name={produto.texto}
+              price={produto.valor}
+              qtd="1"
+            />
           ))}
         </div>
       )}
-      {active === "delivery" && <div>delivery</div>}
-      {active === "payment" && <div>payment</div>}
+      {active === "delivery" && <div>{<Entrega />}</div>}
+      {active === "payment" && <div>{<Pagamento />}</div>}
     </div>
   );
 };

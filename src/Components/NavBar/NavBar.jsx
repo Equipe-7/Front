@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { CarrinhoContext } from "../../Context/carrinho";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FiUser } from "react-icons/fi";
@@ -8,8 +9,9 @@ import "./NavBar.css";
 import Logo from "../../Assets/img/sevenpets2.png";
 
 const NavBar = () => {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
   const [modalShow, setModalShow] = useState(false);
+  const { produtos } = useContext(CarrinhoContext);
 
   return (
     <div className="NavBar">
@@ -93,7 +95,7 @@ const NavBar = () => {
               <FaShoppingCart className="car-icon" />
             </Link>
             <div className="car-und">
-              <span>7</span>
+              <span>{produtos.length}</span>
             </div>
           </div>
         </div>

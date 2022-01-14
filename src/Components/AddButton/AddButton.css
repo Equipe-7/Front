@@ -1,0 +1,14 @@
+.AddButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--roxo);
+  border-radius: 4px;
+  margin-top: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  width: 100%;
+  border: none;
+}

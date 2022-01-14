@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../../Assets/img/sevenpets-h2.png";
+import Caes from "../../Assets/img/sevenanimals.png"
 import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa';
 
 const Footer = () => {
@@ -41,7 +42,6 @@ const Footer = () => {
           <a href='https://twitter.com/origininsider' target="blank"><FaTwitterSquare className='social-item'/></a>
           <a href='https://www.youtube.com/channel/UCXWUa9LL0XXeqBcTCRAkVfg ' target="blank"><FaYoutubeSquare className='social-item' /></a>
         </div>
-        
       </section>
     </footer>
   );

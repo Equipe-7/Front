@@ -40,3 +40,11 @@
     width: 80%;
     margin: auto;
 }
+
+.total-produtos{
+    position: absolute;
+    right: 70px;
+    font-weight: 700;
+    border-bottom: 2px solid;
+    font-size: 1.8rem;
+}
